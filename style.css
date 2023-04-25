@@ -1,7 +1,3 @@
-.card-container * {
-    border: 1px solid red;
-}
-
 .form-container * {
     border: 1px solid blue;
 }
@@ -34,21 +30,23 @@ main {
     justify-content: space-between;
     color: rgb(253, 249, 249);
     text-align: center;
+    min-width: 40vw;
 }
 
 .banner {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 5.5rem;
+    font-size: 5rem;
     font-family: "Norse Bold";
     margin-top: 20vh;
-    padding: 20px 50px;
-    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 30px;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .banner img {
-    height: 150px;
+    height: 130px;
+    margin-right: 20px;
 }
 
 .attribution {
@@ -58,4 +56,31 @@ main {
 
 a {
     color: rgb(89, 49, 3);
+}
+
+/* Form Section */
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+h4 {
+    grid-column: span 2;
+}
+
+button {
+    padding: 20px;
+    margin: 30px 40px;
+    border-radius: 5px;
+    font-size: 25px;
+    background-color: rgb(174, 38, 247);
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(175, 125, 205);
+    color: black;
 }
