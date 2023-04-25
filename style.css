@@ -1,0 +1,61 @@
+.card-container * {
+    border: 1px solid red;
+}
+
+.form-container * {
+    border: 1px solid blue;
+}
+
+@font-face {
+    font-family: "Norse Bold";
+    src: url(./Norse-Bold.otf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+}
+
+/* Image Section */
+
+.card-container {
+    background-image: url("./img/cover-photo.jpg");
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgb(253, 249, 249);
+    text-align: center;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5.5rem;
+    font-family: "Norse Bold";
+    margin-top: 20vh;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner img {
+    height: 150px;
+}
+
+.attribution {
+    font-size: 0.8rem;
+    color: rgb(59, 59, 59);
+}
+
+a {
+    color: rgb(89, 49, 3);
+}
