@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link type="text/css" rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
     <title>Sign-Up Form</title>
   </head>
   <body>
@@ -24,41 +25,42 @@
         </p>
       </div>
       <div class="form-container">
-        <form action="/index.html" method="post">
-          <div class="title">
-            <p>
-              This is not a real online service! You know you need something
-              like this in your life to help you realize your deepest dreams.
-            </p>
-            <p>Sign up <em>now</em> to get started.</p>
-            <p>You know you want to.</p>
-          </div>
+        <p>
+          This is not a real online service! You know you need something like
+          this in your life to help you realize your deepest dreams.
+          <br />
+          Sign up <em>now</em> to get started.
+        </p>
+        <p>You <em>know</em> you want to.</p>
+        <form onsubmit="return validateForm()">
           <div class="content">
-            <h4>Let's do this!</h4>
+            <h3>Let's do this!</h3>
             <div>
               <label for="first_name">FIRST NAME</label>
-              <input type="text" name="firstName" id="first_name" />
+              <input type="text" name="firstName" id="first_name" required />
             </div>
             <div>
               <label for="last_name">LAST NAME</label>
-              <input type="text" name="lastName" id="last_name" />
+              <input type="text" name="lastName" id="last_name" required />
             </div>
             <div>
               <label for="email">EMAIL</label>
-              <input type="email" name="email" id="email" />
+              <input type="email" name="email" id="email" required />
             </div>
             <div>
               <label for="phone_number">PHONE NUMBER</label>
-              <input
-                type="text"
-                name="phoneNumber"
-                id="phone_number"
-                pattern=""
-              />
+              <input type="tel" name="phoneNumber" id="phone_number" required />
             </div>
             <div>
               <label for="password">PASSWORD</label>
-              <input type="password" name="password" id="password" />
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="error"
+                required
+              />
+              <p id="password-error-msg"></p>
             </div>
             <div>
               <label for="confirm_password">CONFIRM PASSWORD</label>
@@ -66,15 +68,17 @@
                 type="password"
                 name="confirmPassword"
                 id="confirm_password"
+                class="error"
+                required
               />
+              <p id="confirm-password-error-msg"></p>
             </div>
           </div>
-          <button>Create Account</button>
-          <div class="logIn">
-            Already have an account? <a href="">Log in</a>
-          </div>
+          <button type="submit">Create Account</button>
         </form>
+        <p class="log-in">Already have an account? <a href="">Log in</a></p>
       </div>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>
